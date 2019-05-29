@@ -34,7 +34,7 @@ def train():
 	model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
 	print(model.summary())
 	
-	model.fit_generator(generator=train_generator,steps_per_epoch=20,epochs=10)
+	model.fit_generator(generator=train_generator,steps_per_epoch=8142/32,epochs=10)
 	model.save('model.h5')
 
 def test():
